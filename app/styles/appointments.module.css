@@ -1,0 +1,107 @@
+.appointmentsContainer {
+    color: black;
+    margin: 1em;
+}
+
+.appointmentHeader {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.appointmentComponents {
+    display: flex;
+    flex-direction: column;
+}
+
+.appointmentsList, .doctorsList, .appointmentBookingForm {
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.appointmentsListHeader, .doctorsListHeader, .appointmentBookingFormHeader {
+    font-size: 1.3rem;
+}
+
+.doctorsListContent, .appointmentsListContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.doctorsListTableWrapper, .appointmentsListTableWrapper {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.doctorsListTable, .appointmentsListTable {
+    width: 100%;
+    min-width: max-content;
+    border-collapse: collapse;
+    border-width: 1px;
+    border-color: #D1D5DB;
+    border-style: solid;
+}
+
+.doctorsListTableHeaderRow, .appointmentsListTableHeaderRow {
+    background-color: #E5E7EB;
+}
+
+.doctorsListTableCell, .appointmentsListTableCell {
+    border: 1px solid #D1D5DB;
+    padding: 0.5em 1em;
+}
+
+.appointmentsListTableCellDateTime {
+    text-align: center;
+}
+
+.doctorsListTableRow:hover, .appointmentsListTableRow:hover {
+    background-color: #F3F4F6;
+}
+
+.appointmentBookingFormContent {
+    overflow-x: auto;
+    width: 100%;
+    margin: 0.5em 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-auto-rows: auto 50px;
+    grid-template-areas: 
+        "ds dt tm"
+        "dc dc dc";
+    gap: 0.5em;
+}
+
+.appointmentBookingFormContentComponents {
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 0.2em 0.5em;
+}
+
+.appointmentBookingFormDoctorSelector {
+    grid-area: ds;
+}
+
+.appointmentBookingFormDate {
+    grid-area: dt;
+}
+
+.appointmentBookingFormTime {
+    grid-area: tm;
+}
+
+.appointmentBookingFormDescription {
+    grid-area: dc;
+}
+
+.appointmentBookingFormContentButton {
+    background-color: darkslateblue;
+    color: aliceblue;
+}
+
+.appointmentBookingFormContentButton:hover {
+    background-color: rgba(81, 72, 138, 0.863);
+    cursor: pointer;
+}

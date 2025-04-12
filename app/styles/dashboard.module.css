@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.dashboardWrapper {
+    min-height: 100vh;
+    font-family: "Roboto", sans-serif;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 8em auto;
+    grid-template-areas: 
+        "lg hd hd hd"
+        "nv ds ds ds";
+}
+
+.dashboardLogo {
+    grid-area: lg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.userProfile {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.dashboardHeader {
+    grid-area: hd;
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(2, 2, 47);
+    padding: 1em 1.5em 2em 2em;
+}
+
+.dashboardHeaderContent {
+    font-size: 2rem;
+}
+
+.dashboardHeaderDescription {
+    font-size: 1rem;
+}
+
+.dashboardNavbarWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboardNavbar {
+    background-color: rgb(2, 2, 47);
+
+    grid-area: nv;
+    flex-basis: 100%;
+    flex-grow: 1;
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar li {
+    padding: 1em 1.5em;
+}
+
+.navbar li:hover {
+    cursor: pointer;
+    background-color: rgba(74, 74, 137, 0.8);
+}
+
+.navbarLink {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.activeLink {
+    background-color: darkblue;
+}
+
+.dashboardContent {
+    grid-area: ds;
+    background-color: aliceblue;
+}
+
+@media screen and (min-width: 768px) {
+    .dashboardWrapper {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 8em;
+        grid-template-areas: 
+            "lg hd hd hd hd hd"
+            "nv ds ds ds ds ds";
+    }
+}

@@ -1,0 +1,112 @@
+.insuranceContainer {
+    color: black;
+    padding: 1.5em;
+    max-width: 90%;
+    margin: auto;
+}
+
+.insuranceHeader {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.insuranceComponents {
+    display: flex;
+    flex-direction: column;
+}
+
+.claimForm, .claimsList, .billingHistory {
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.claimFormHeader, .claimsListHeader, .billingHistoryHeader {
+    font-size: 1.3rem;
+}
+
+.claimFormElements {
+    margin: 0.5em auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas: 
+        "pv am"
+        "ds ds";
+    gap: 0.5em;
+}
+
+.claimFormInput {
+    border: 2px solid gray;
+    border-radius: 3px;
+    padding: 0.5em 1em;
+}
+
+.claimFormInsuranceProvider {
+    grid-area: pv;
+}
+
+.claimFormInsuranceAmount {
+    grid-area: am;
+}
+
+.claimFormInsuranceDescription {
+    grid-area: ds;
+}
+
+.claimFormInsuranceButton {
+    background-color: darkslateblue;
+    color: aliceblue;
+    margin: 0.5em auto;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+}
+
+.claimsList {
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.claimsListHeader {
+    font-size: 1.3rem;
+}
+
+.claimsListContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.claimsListTableWrapper {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.claimsListTable {
+    width: 100%;
+    min-width: max-content;
+    border-collapse: collapse;
+    border-width: 1px;
+    border-color: #D1D5DB;
+    border-style: solid;
+}
+
+.claimsListTableHeaderRow {
+    background-color: #E5E7EB;
+}
+
+.claimsListTableCell {
+    border: 1px solid #D1D5DB;
+    padding: 0.5em 1em;
+}
+
+.claimsListTableAmountCell, .claimsListTableTimeCell {
+    text-align: center;
+}
+
+.claimsListTableRow:hover {
+    background-color: #F3F4F6;
+}

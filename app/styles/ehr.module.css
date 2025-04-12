@@ -1,0 +1,182 @@
+.ehrContainer {
+    color: black;
+    padding: 1.5em;
+    max-width: 90%;
+    margin: auto;
+}
+
+.ehrComponents {
+    display: flex;
+    flex-direction: column;
+}
+
+.ehrHeader {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.uploadForm, .recordsList, .accessControlWrapper {
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.uploadFormHeader, .recordsListHeader, .accessControlHeader {
+    font-size: 1.3rem;
+}
+
+.uploadFormElements {
+    display: grid;
+    grid-template-columns: minmax(100px, 2fr) minmax(50px, 1fr);
+    grid-auto-rows: 60px;
+    gap: 1em;
+    grid-template-areas: "ds ip";
+}
+
+.uploadFormDescription {
+    margin: 0.5em 0;
+    padding: 0.5em;
+    border: 2px solid gray;
+    border-radius: 5px;
+    
+    grid-area: ds;
+}
+
+.uploadFormInput {
+    margin: 0.5em 0;
+    padding: 0.5em;
+    background-color: rgb(203, 203, 203);
+    border-radius: 5px;
+
+    grid-area: ip;
+}
+
+.uploadFormInput:hover {
+    cursor: pointer;
+}
+
+.accessControlElements {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: space-evenly;
+}
+
+.accessControlDoctorSelector {
+    height: 40px;
+    margin: 0.5em 0;
+    padding: 0.5em;
+    background-color: rgb(203, 203, 203);
+    border-radius: 5px;
+    flex-basis: 90%;
+}
+
+.uploadFormButton, .grantAccessButton, .searchRecordsButton, .revokeAccessButton {
+    height: 40px;
+    margin: 0.5em 0;
+    padding: 0.5em;
+    text-wrap: nowrap;
+    background-color: darkslateblue;
+    color: aliceblue;
+    border-radius: 5px;
+}
+
+.uploadFormButton:hover, .grantAccessButton:hover, .searchRecordsButton:hover, .revokeAccessButton:hover {
+    background-color: rgba(81, 72, 138, 0.863);
+    cursor: pointer;
+}
+
+.ehrList, .accessList, .emergencyList {
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.ehrListHeader, .accessListHeader, .emergencyListHeader {
+    font-size: 1.3rem;
+}
+
+.ehrListContent, .accessListContent, .emergencyListContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.ehrListTableWrapper, .accessListTableWrapper, .emergencyListTableWrapper {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.ehrListTable, .accessListTable, .emergencyListTable {
+    width: 100%;
+    min-width: max-content;
+    border-collapse: collapse;
+    border-width: 1px;
+    border-color: #D1D5DB;
+    border-style: solid;
+}
+
+.ehrListTableHeaderRow, .accessListTableHeaderRow, .emergencyListTableHeaderRow {
+    background-color: #E5E7EB;
+}
+
+.ehrListTableCell, .accessListTableCell, .emergencyListTableCell {
+    border: 1px solid #D1D5DB;
+    padding: 0.5em 1em;
+}
+
+.ehrListTableEhrCell {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.ehrListTableTimeCell, .accessListTableDoctorAddressCell, .emergencyListTableAddressCell, .emergencyListTableContactNoCell {
+    text-align: center;
+}
+
+.ehrListTableRow:hover, .accessListTableRow:hover, .emergencyListTableRow:hover  {
+    background-color: #F3F4F6;
+}
+
+.accessControlWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.searchPatientsRecord {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.searchPatientsRecordInput {
+    height: 40px;
+    margin: 0.5em 0;
+    padding: 0.5em;
+    background-color: rgb(203, 203, 203);
+    border-radius: 5px;
+    flex-basis: 90%;
+}
+
+.searchPatientsRecordsButton {
+    height: 40px;
+    margin: 0.5em 0;
+    padding: 0.5em;
+    text-wrap: nowrap;
+    background-color: darkslateblue;
+    color: aliceblue;
+    border-radius: 5px;
+}
+
+.searchPatientsRecordsButton:hover {
+    background-color: rgba(81, 72, 138, 0.863);
+    cursor: pointer;
+}
+
+.emergencyListStatusHeader {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
