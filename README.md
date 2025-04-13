@@ -52,27 +52,24 @@ Coming Soon
 | Database  | IPFS (Pinata) |
 | Wallet Authentication  | MetaMask |
 
-
 All contracts reside in the same .sol file and are deployed as separate contract instances.
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
+- To run this project locally, Node.js must be installed in your system.
+- Clone the repository in your local directory using `git clone https://github.com/sarjitapatra/HealthNest.git`
+- Run `npm install` to install the dependancies.
+- To run the development server, use `npm run dev`
 
-First, clone the repository in your local directory using ` git clone ` 
+## Project Structure
+- The `app` folder contains the frontend and backend components.
+- The `blockchain` folder contains the Solidity smart contract and the compiled ABI codes.
+- The `constants` folder contains information about the contracts.
 
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Additional Information
+- A custom script called `compile` has been added inside the `package.json` file to compile the smart contract.
+- The script contains the input path for the smart contract and the output path for the compiled ABIs.
+- Run `npm run compile` to compile the smart contracts locally (without using any framework like Truffle or HardHat) 
+  
+Open [http://localhost:3000/auth](http://localhost:3000/auth) with your browser to see the result.
 
