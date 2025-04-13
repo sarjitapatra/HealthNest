@@ -1,9 +1,9 @@
 export const contractAddress = {
-    "healthcare": "0x2E8F07CBdCE2B50E92A8F38f41ab53009981fB6C",
-    "medicalRecords": "0xF80dcaCb808dfD99B9d2Bb4e1aE9802B16c2Ac49",
-    "appointments": "0x2841cDcDe39B834BE266AC5d08da4725A50d6EEC",
-    "insurance": "0xCe681C0a3b3fEAb87515709141F2Fc146b90f829",
-    "emergency": "0x05737264Ff5bC70f2f04D53427E1f45B139af168"
+    "healthcare": "0x03e49F3eACf2B9D2d7178D7294f78Cfc42e47c7f",
+    "medicalRecords": "0x0aAC55372dE847a76fc74fb3B0E942fB7D755557",
+    "appointments": "0x5cafC348e4eD713e7bd9e5140c72B550413612a5",
+    "insurance": "0x424FF240f7aA7f2848a5a589A7738Ba6fa932c64",
+    "emergency": "0xbB9dA4b1c2AE78Fe356C880d5Edc37a670fF6f1a"
 };
 
 export const contractABI = {

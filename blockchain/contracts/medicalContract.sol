@@ -339,7 +339,7 @@ contract EmergencyContract{
         {
             for(uint j=0;j<healthcareData.doctorCount();j++)
             {
-                if(healthcareData.isApproved(msg.sender,healthcareData.doctorList(j)) ||(healthcareData.emergencymap(msg.sender, healthcareData.patientList(i))==true && healthcareData.hasAccess(healthcareData.patientList(i), healthcareData.doctorList(j))==HealthcareData.AccessStatus.Granted))
+                if((healthcareData.isApproved(msg.sender,healthcareData.doctorList(j)) && msg.sender==healthcareData.patientList(i)) ||(healthcareData.emergencymap(msg.sender, healthcareData.patientList(i))==true && healthcareData.hasAccess(healthcareData.patientList(i), healthcareData.doctorList(j))==HealthcareData.AccessStatus.Granted))
                     count++;
             }
         }
@@ -349,11 +349,11 @@ contract EmergencyContract{
         {
             for(uint j=0;j<healthcareData.doctorCount();j++)
             {
-                if(healthcareData.isApproved(msg.sender,healthcareData.doctorList(j)) || (healthcareData.emergencymap(msg.sender, healthcareData.patientList(i))==true && healthcareData.hasAccess(healthcareData.patientList(i), healthcareData.doctorList(j))==HealthcareData.AccessStatus.Granted))
+                if((healthcareData.isApproved(msg.sender,healthcareData.doctorList(j)) && msg.sender==healthcareData.patientList(i)) || (healthcareData.emergencymap(msg.sender, healthcareData.patientList(i))==true && healthcareData.hasAccess(healthcareData.patientList(i), healthcareData.doctorList(j))==HealthcareData.AccessStatus.Granted))
                     {
                         address padd=healthcareData.patientList(i);
                         address dadd=healthcareData.doctorList(j);
-                          // Get patient address from array
+                         
                         (
                         string memory name,
                         ,
@@ -510,23 +510,5 @@ contract Appointments {
         return insuranceClaims[msg.sender];      
         }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
