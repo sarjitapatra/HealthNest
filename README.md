@@ -52,8 +52,6 @@ Coming Soon
 | Database  | IPFS (Pinata) |
 | Wallet Authentication  | MetaMask |
 
-All contracts reside in the same .sol file and are deployed as separate contract instances.
-
 
 ## Getting Started
 - To run this project locally, Node.js must be installed in your system.
@@ -69,6 +67,7 @@ All contracts reside in the same .sol file and are deployed as separate contract
 ## Additional Information
 - A custom script called `compile` has been added inside the `package.json` file to compile the smart contract.
 - The script contains the input path for the smart contract and the output path for the compiled ABIs.
+- In our project, all contracts reside in the same `.sol` file and are deployed as separate contract instances.
 - Run `npm run compile` to compile the smart contracts locally (without using any framework like Truffle or HardHat) 
   
 Open [http://localhost:3000/auth](http://localhost:3000/auth) with your browser to see the result.
