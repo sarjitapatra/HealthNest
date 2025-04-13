@@ -1,6 +1,66 @@
+# HealthNest
+- A secure, transparent, and blockchain-based platform to manage patient medical records, appointments, insurance claims, and emergency access — all while maintaining strict access control. 
+- Built with Solidity and integrated into a full-stack DApp.
+- This decentralized application (DApp) empowers patients to manage their medical data and securely share it with doctors, insurance providers, and emergency contacts via blockchain smart contracts. It eliminates data silos, ensures integrity, and gives control back to users.
+
+Live Demo
+Coming Soon
+
+## Features
+### User Registration
+* #### Patient
+  > A patient registers to the website using their personal info. These details are stored in the Ethereum blockchain by mapping with the patient's unique Metamask wallet address. These details are displayed on the user profile.
+* #### Doctor
+  > A doctor registers to the website using their personal info. These details are stored in the Ethereum blockchain by mapping with the doctor's unique Metamask wallet address. These details are displayed on the user profile.
+
+### Appointments
+* Enables patient to create an appointment with a registered doctor.
+* Registered doctors list visible on the patient's profile.
+* Appointment details : Date, time, description, prescription, diagnosis.
+* Doctors and patients can view appointment history
+
+### Medical Records
+* Enables patient to upload record (IPFS hash, description)
+* Medical data will be encrypted and stored in IPFS.
+* A hash of the encrypted record will be stored on the blockchain.
+
+### Insurance Claim
+* Patients can file a claim by providing provider name, reason, claim amount.
+* Retrieve previous claim history
+
+### Access Control
+* Direct Access
+  * Patients will be able to assign permissions to doctors to be able to view their medical record history.
+  * Once approved, the encrypted data is retrieved and shown on the doctor's profile.
+  * Patient profiles and medical records are protected and accessible only when granted.
+  * Patient can also revoke access if they wish to.
+* Emergency Access
+  * Patient assigns an emergency contact on registration.
+  * Doctor requests access in emergencies to the patient's records.
+  * Emergency contact (assigned by patient) can view all pending/granted requests related to them on their profile and can approve access request to the doctor.
+  * The status of the access request is changed to Granted and the doctor can view the patient's medical record on their profile.
+  * The emergency contact or the patient can revoke access.
+
+## Tech Stack
+
+| Component | Technology |
+| :---------| :----------|
+| Frontend  | React.js, Next.js, CSS |
+| Backend   | TypeScript |
+| Blockchain  | Etheruem |
+| Smart Contracts | Solidity |
+| Database  | IPFS (Pinata) |
+| Wallet Authentication  | MetaMask |
+
+
+All contracts reside in the same .sol file and are deployed as separate contract instances.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
+
+First, clone the repository in your local directory using ` git clone ` 
+
 
 First, run the development server:
 
@@ -16,21 +76,3 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
